@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased · Organization and website alignment
+
+Transferred to Node & Norm with existing visibility preserved. Updated active repository links and documented website placement, source-version boundaries, and open research gates. Existing tags and releases remain unchanged.
+
 *CDFI Framework — Version history and re-evaluation record*
 
 ---

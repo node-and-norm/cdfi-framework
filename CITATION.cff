@@ -17,8 +17,8 @@ authors:
 version: "1.5"
 date-released: "2026-05-31"
 license: Apache-2.0
-repository-code: "https://github.com/mj3b/cdfi-framework"
-url: "https://github.com/mj3b/cdfi-framework"
+repository-code: "https://github.com/node-and-norm/cdfi-framework"
+url: "https://github.com/node-and-norm/cdfi-framework"
 doi: "10.5281/zenodo.20475185"
 keywords:
   - AI evaluation
