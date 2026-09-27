@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this framework, please cite it using the metadata below."
+message: "This metadata cites the archived v1.5 release. For later development, also record the exact commit used. See PUBLICATION_SNAPSHOT.md."
 type: software
 title: "CDFI Framework: Evaluation Governance Infrastructure for Domain-Specific AI Doctrinal Benchmarking"
 abstract: >

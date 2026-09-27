@@ -1,5 +1,9 @@
 # Catholic Doctrinal Fidelity Index (CDFI) Framework
 
+> **Canonical active repository:** [node-and-norm/cdfi-framework](https://github.com/node-and-norm/cdfi-framework). The historical [mj3b/cdfi-framework](https://github.com/mj3b/cdfi-framework) URL cited in the 2026 SAICRED chapter is preserved through GitHub’s transfer redirect.
+>
+> **Archived publication snapshot: v1.5 (2026-05-31).** Use [DOI 10.5281/zenodo.20475185](https://doi.org/10.5281/zenodo.20475185) and the [fixed v1.5 source commit](https://github.com/node-and-norm/cdfi-framework/tree/5e81799c6bc030b2ce5736cc8f9af2aaec0dbdb6) for reproduction. `main` contains subsequent changes. See the [publication snapshot and citation note](PUBLICATION_SNAPSHOT.md).
+
 **Node & Norm · AI Evaluation & Assurance.** Website record `NN-EA-M01`; reference implementation v1.5. Scoring-contract reconciliation remains open. SAICRED remains an external collaborative project with its existing leadership and publication authority. [Website alignment](WEBSITE_ALIGNMENT.md) · [Project directory](https://github.com/node-and-norm)
 
 **Evaluation Governance Infrastructure for Domain-Specific AI Doctrinal Benchmarking**
@@ -322,6 +326,8 @@ This project used Claude (Anthropic) for methodology development, document draft
 ---
 
 ## Citation
+
+The citation below identifies the archived v1.5 release. For work using later changes on `main`, also record the exact commit. See [snapshot provenance](PUBLICATION_SNAPSHOT.md).
 
 ```bibtex
 @software{banasihan2026cdfi,
