@@ -45,7 +45,7 @@ The CDFI Framework is the evaluation governance layer of this project.
 
 The three roles were not interchangeable and could not substitute for each other. The Project Lead's theological framing defined what the benchmark was measuring. The Lead Engineer's pipeline produced the data. The Evals Expert's scoring architecture determined whether that data was defensible enough to support institutional deployment guidance.
 
-**Additional contributor:** [William J. Benjamin, PhD](https://www.linkedin.com/in/wjbphd/). This contributor acknowledgment is separate from the role descriptions above and does not assign a technical, editorial-review, or validation role.
+**SAICRED team member:** [William J. Benjamin, PhD](https://www.linkedin.com/in/wjbphd/). William joined the team for future work. This membership listing does not attribute a contribution to the existing CDFI release.
 
 The framework citation identifies Mark Julius Banasihan's CDFI methodology and software. It does not identify him as the sole creator of the wider SAICRED project or convert collaborator credits into coauthorship of the framework. Named project participation does not establish independent validation.
 
@@ -363,5 +363,3 @@ Copyright © 2026 Mark Julius Banasihan. Licensed under the [Apache License 2.0]
 Evaluation governance systems for AI in high-stakes institutional and doctrinal contexts.
 
 [GitHub](https://github.com/mj3b) · [LinkedIn](https://linkedin.com/in/markjuliusbanasihan) · [ORCID](https://orcid.org/0009-0001-8121-2878) · [Email](mailto:markjuliusbanasihan@gmail.com) · Atlanta, Georgia, United States
-
-
