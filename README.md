@@ -1,5 +1,15 @@
 # Catholic Doctrinal Fidelity Index (CDFI) Framework
 
+## Research summary
+
+Evolving. A source-linked scoring architecture translated from seven AI safety publications for SAICRED. Scoring-contract reconciliation and human theological validation remain open.
+
+Inspect and adapt evaluation requirements, scoring rules and review procedures with qualified domain oversight.
+
+[Findings, use, limits and next steps](docs/research-summary.md), reviewed 29 October 2026.
+
+
+
 > **Canonical active repository:** [node-and-norm/cdfi-framework](https://github.com/node-and-norm/cdfi-framework). The historical [mj3b/cdfi-framework](https://github.com/mj3b/cdfi-framework) URL cited in the 2026 SAICRED chapter is preserved through GitHub’s transfer redirect.
 >
 > **Archived publication snapshot: v1.5 (2026-05-31).** Use [DOI 10.5281/zenodo.20475185](https://doi.org/10.5281/zenodo.20475185) and the [fixed v1.5 source commit](https://github.com/node-and-norm/cdfi-framework/tree/5e81799c6bc030b2ce5736cc8f9af2aaec0dbdb6) for reproduction. `main` contains subsequent changes. See the [publication snapshot and citation note](PUBLICATION_SNAPSHOT.md).
