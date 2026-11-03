@@ -8,6 +8,8 @@ Inspect and adapt evaluation requirements, scoring rules and review procedures w
 
 [Findings, use, limits and next steps](docs/research-summary.md), reviewed 29 October 2026.
 
+[AI use, human responsibility and verification limits](docs/ai-use-disclosure.md), reviewed November 3, 2026.
+
 
 
 > **Canonical active repository:** [node-and-norm/cdfi-framework](https://github.com/node-and-norm/cdfi-framework). The historical [mj3b/cdfi-framework](https://github.com/mj3b/cdfi-framework) URL cited in the 2026 SAICRED chapter is preserved through GitHub’s transfer redirect.
