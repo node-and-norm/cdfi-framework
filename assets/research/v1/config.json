@@ -1,0 +1,37 @@
+{
+  "title": "Catholic Doctrinal Fidelity Index",
+  "purpose": "Connecting evaluation rules to sources and review.",
+  "mobile_title_lines": [
+    "Catholic Doctrinal",
+    "Fidelity Index"
+  ],
+  "mobile_purpose_lines": [
+    "Connecting evaluation rules",
+    "to sources and review."
+  ],
+  "sources": [
+    "docs/research-summary.md",
+    "TRANSLATION-METHOD.md"
+  ],
+  "badges": [
+    {
+      "label": "Status",
+      "value": "Evolving",
+      "href": "docs/research-summary.md",
+      "id": "status"
+    },
+    {
+      "label": "Archive",
+      "value": "1.5",
+      "href": "PUBLICATION_SNAPSHOT.md",
+      "id": "version"
+    },
+    {
+      "label": "Declared license",
+      "value": "Apache-2.0",
+      "href": "LICENSE",
+      "id": "license"
+    }
+  ],
+  "desktop_title_size": 40
+}
