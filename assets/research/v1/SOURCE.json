@@ -1,0 +1,20 @@
+{
+  "repository": "node-and-norm/.github",
+  "commit": "cae1260c05b686a30f51580ae96ec705428c8535",
+  "path": "assets/research/v1/projects/cdfi-framework",
+  "copied_file_sha256": {
+    "banner-light.svg": "4d4452d03e5a69a24d5dcee6b05eb712588aa930617fc8c4111bbd2e894cd8b0",
+    "config.json": "cfcd7ae0e70cacb864ddcedecfc574701e841181de20c5715cd461e4fae2a568",
+    "banner-mobile-light.svg": "42ef172ae8c6134347b68fdf9a3069bc87478c7fd861cbd2f0813dd348719fa4",
+    "manifest.json": "88c9bad95596df5e714538496e53f32d59c1fff26b3af6b9a96b78cad8c6ab9b",
+    "banner-dark.svg": "0c5c1c092d08eb5e775bde374b83b544351673082fe8534258e30ce8abb5ee68",
+    "banner-mobile-dark.svg": "4394d704f94aba5e7f2da1b5082589ad83c493b3e93a171666c4f3a162689f0e",
+    "badges/license-dark.svg": "3e46ce64c224038b273f9c3cd59f24cf3d34f804913d1058fb31157e71b5d6aa",
+    "badges/version-dark.svg": "c3b9cc1e8249538430f92456245c847a760f3cd397bc67c0b74e96f8d79fb297",
+    "badges/license-light.svg": "c7dd1e9dced90fc3303ebbfc047209a0591f96dfee9544cd1547eec9031a941d",
+    "badges/status-light.svg": "1602bc6dbdecbef1a4235d010d717aa5a4383982553ba125f6f585552fefcb9f",
+    "badges/status-dark.svg": "c02f6c01aefcb2728e2b0ec5d23d7b1d1c411b142520581c6209b4e8464e2701",
+    "badges/version-light.svg": "48138368a95b237515ac6c170be16942664743589c2b0dd29d6f83ab16891d52"
+  },
+  "integration": "Dark banner and badges in both browser themes. Mobile title uses explicit line breaks."
+}

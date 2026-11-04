@@ -1,377 +1,110 @@
-# Catholic Doctrinal Fidelity Index (CDFI) Framework
+<h1>
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/research/v1/banner-mobile-dark.svg">
+  <img src="assets/research/v1/banner-dark.svg" alt="Catholic Doctrinal Fidelity Index" width="1000">
+</picture>
+</h1>
 
-## Research summary
+[![Status: Evolving](assets/research/v1/badges/status-dark.svg)](docs/research-summary.md) [![Archive: 1.5](assets/research/v1/badges/version-dark.svg)](PUBLICATION_SNAPSHOT.md) [![Declared license: Apache-2.0](assets/research/v1/badges/license-dark.svg)](LICENSE)
 
-Evolving. A source-linked scoring architecture translated from seven AI safety publications for SAICRED. Scoring-contract reconciliation and human theological validation remain open.
+Which failures should disqualify a persuasive answer, and who can justify that judgment? The Catholic Doctrinal Fidelity Index (CDFI) proposes scoring rules and review procedures for evaluating AI responses within the SAICRED project. [Research question](docs/research-summary.md).
 
-Inspect and adapt evaluation requirements, scoring rules and review procedures with qualified domain oversight.
+[Policy reader: understand in 90 seconds](#research-in-90-seconds) · [Reviewer: inspect evidence and limits](docs/current-review.md) · [Engineer: run the calculator](docs/reference-verification.md)
 
-[Findings, use, limits and next steps](docs/research-summary.md), reviewed 29 October 2026.
+## At a glance
 
-[AI use, human responsibility and verification limits](docs/ai-use-disclosure.md), reviewed November 3, 2026.
+| | Current account |
+| :--- | :--- |
+| Purpose | Connect domain-specific evaluation rules with sources, scoring and review. [Method](TRANSLATION-METHOD.md) |
+| Status | Evolving. Scoring-contract reconciliation and human theological validation remain open. [Research account](docs/research-summary.md) |
+| Evidence type | Source translations, a public calculator and attributed reports from a separate production pipeline. [Review guide](docs/current-review.md) |
+| Version | Archived v1.5, May 31, 2026. The active branch includes later changes. [Publication record](PUBLICATION_SNAPSHOT.md) |
+| License | Declared Apache-2.0. [Preserved license](LICENSE) · [attribution](NOTICE) |
+| Cite | [Archived v1.5: 10.5281/zenodo.20475185](https://doi.org/10.5281/zenodo.20475185) · [citation metadata](CITATION.cff) |
 
+**The method remains provisional.** Differences among the formula, configuration and calculator require reconciliation. Qualified human theological review remains open. The public calculator supplies a bounded implementation demonstration. [Current status](docs/research-summary.md), [contract limits](docs/current-review.md#known-limits).
 
+## Research in 90 seconds
 
-> **Canonical active repository:** [node-and-norm/cdfi-framework](https://github.com/node-and-norm/cdfi-framework). The historical [mj3b/cdfi-framework](https://github.com/mj3b/cdfi-framework) URL cited in the 2026 SAICRED chapter is preserved through GitHub’s transfer redirect.
->
-> **Archived publication snapshot: v1.5 (2026-05-31).** Use [DOI 10.5281/zenodo.20475185](https://doi.org/10.5281/zenodo.20475185) and the [fixed v1.5 source commit](https://github.com/node-and-norm/cdfi-framework/tree/5e81799c6bc030b2ce5736cc8f9af2aaec0dbdb6) for reproduction. `main` contains subsequent changes. See the [publication snapshot and citation note](PUBLICATION_SNAPSHOT.md).
+A fluent response can still mishandle a source or a doctrinal distinction. CDFI asks how an evaluation should represent those failures and who should review its judgment. Its contribution connects selected research ideas to proposed metrics, scoring rules, score caps and reliability checks. A score cap limits a response's numerical score when a declared failure occurs. [Research account](docs/research-summary.md), [translation method](TRANSLATION-METHOD.md).
 
-**Node & Norm · AI Evaluation & Assurance.** Website record `NN-EA-M01`; reference implementation v1.5. Scoring-contract reconciliation remains open. SAICRED remains an external collaborative project with its existing leadership and publication authority. [Website alignment](WEBSITE_ALIGNMENT.md) · [Project directory](https://github.com/node-and-norm)
+The work translates selected ideas from seven AI safety publications into a Catholic doctrinal evaluation context. Those translations contain researcher judgments about how findings apply to a new setting. Reviewers can inspect the sources, reasoning and proposed rules separately. [Source-to-method map](TRACEABILITY.md), [claim packs](claims/).
 
-**Evaluation Governance Infrastructure for Domain-Specific AI Doctrinal Benchmarking**
+The current evidence leaves the validity of particular weights, thresholds and institutional uses open. Technical consistency checks have a narrower scope than qualified theological review. The next steps are to reconcile the scoring contract, reproduce results from exact inputs and complete the required human assessment. [Research limits](docs/research-summary.md#limits-and-next-evidence), [validation status](docs/governance/cdcf-compliance/c4-validation-status.md).
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![DOI](https://zenodo.org/badge/1253813359.svg)](https://doi.org/10.5281/zenodo.20475185)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0001--8121--2878-brightgreen)](https://orcid.org/0009-0001-8121-2878)
-[![Status: v1.5 — Reference Implementation](https://img.shields.io/badge/status-v1.5%20reference%20implementation-5b6cff)](https://github.com/node-and-norm/cdfi-framework/releases)
-[![Tradition-Agnostic](https://img.shields.io/badge/scope-tradition--agnostic-3bb273)](docs/governance/adapting-for-other-traditions.md)
-[![Seven Source Publications](https://img.shields.io/badge/grounded%20in-7%20AI%20safety%20publications-ff6b35)](TRACEABILITY.md)
-[![SAICRED v2](https://img.shields.io/badge/reference%20implementation-SAICRED%20v2-1565C0)](examples/saicred-v2/)
-[![NIST AI RMF](https://img.shields.io/badge/aligned%20with-NIST%20AI%20RMF%201.0-4a90d9)](docs/governance/nist-rmf-mapping.md)
-[![EU AI Act](https://img.shields.io/badge/mapped%20to-EU%20AI%20Act%202024-003399)](docs/governance/eu-ai-act-mapping.md)
-[![OWASP LLM](https://img.shields.io/badge/security-OWASP%20LLM%20Top%2010-e03434)](docs/governance/security-considerations.md)
+## Method in brief
 
----
-
-> **The problem this framework solves:** General-purpose AI benchmarks measure capability. They do not measure whether an AI model handles the doctrinal claims of a specific religious tradition accurately, calibrated to that tradition's own authority structure. This framework does.
-
----
-
-## The SAICRED Project
-
-> **SAICRED** (Standard for Assessing AI for Catholic Reliability and Doctrinal Fidelity)
->
-> Originated by [Filip Ponulak, PhD](https://www.linkedin.com/in/filipponulak/), who identified
-> the gap: no systematic way to evaluate how faithfully AI models represent Catholic doctrine.
-> He designed the framework to fill it. The SAICRED white paper (v2.0, February 2026) specified
-> the benchmark's purpose, scope, eight evaluation metrics, five use-case categories, and
-> eight-step methodology.
-
-The CDFI Framework is the evaluation governance layer of this project.
-
-| Role | Person | Contribution |
-|------|--------|-------------|
-| **Project Lead** | [Filip Ponulak, PhD](https://www.linkedin.com/in/filipponulak/) | Originated SAICRED; designed the overall framework, evaluation criteria, and use-case taxonomy; authored the SAICRED white paper (v2.0, February 2026); holds theological authority and publication ownership |
-| **Lead Engineer** | [Naveen Kumar Puppala](https://github.com/naveenp2708) | Built the production pipeline: 400 prompts across 6 models, Gemini 2.5 Flash as automated judge, 9 metrics scored per response, CDFI computation, 21,599 metric scores stored across 4 structured CSVs, interactive results dashboard |
-| **Evals Expert** | [Mark Julius Banasihan](https://github.com/mj3b) | Translated the white paper's evaluation criteria into a defensible scoring architecture: CDFI formula, four-column authority-sensitive weighting matrix, hallucination and relativism resistance cap gates, four-part judge reliability certification protocol, limitation disclosures, and deployment tier thresholds |
-
-The three roles were not interchangeable and could not substitute for each other. The Project Lead's theological framing defined what the benchmark was measuring. The Lead Engineer's pipeline produced the data. The Evals Expert's scoring architecture determined whether that data was defensible enough to support institutional deployment guidance.
-
-**SAICRED team member:** [William J. Benjamin, PhD](https://www.linkedin.com/in/wjbphd/). William joined the team for future work. This membership listing does not attribute a contribution to the existing CDFI release.
-
-The framework citation identifies Mark Julius Banasihan's CDFI methodology and software. It does not identify him as the sole creator of the wider SAICRED project or convert collaborator credits into coauthorship of the framework. Named project participation does not establish independent validation.
-
-Production pipeline: [saicred-benchmark](https://github.com/naveenp2708/saicred-benchmark) *(private — access pending publication)*
-
----
-
-## What This Is (and Is Not)
-
-The CDFI Framework is a reusable evaluation governance methodology for building domain-specific AI doctrinal benchmarks. Derived from seven frontier AI safety research publications and translated into a scoring architecture for Catholic doctrinal evaluation. SAICRED v2 is the reference implementation.
-
-**It is not a benchmark.** It is the methodology that makes a benchmark defensible.
-
-| This IS | This IS NOT |
-|---------|------------|
-| An evaluation governance methodology: every weight, gate, and threshold traces to a named publication | A benchmark dataset: prompts and responses live in the production pipeline |
-| A tradition-agnostic framework: any tradition can substitute its own authority structure | A production scoring pipeline: that is `saicred-benchmark/scoring_service.py` |
-| A portable reference implementation: run `engine/cdfi_calculator.py` independently | Regulatory or theological advice: all doctrinal determinations remain with qualified human authorities |
-| A publication-readiness protocol: three explicit gates must clear before scores carry institutional weight | An autonomous system: no component decides, approves, or classifies without human oversight |
-
----
-
-## The Core Sequence
-
-Every benchmark built on this framework follows seven steps in order. Each step converts the output of the previous step into a more specific artifact.
-
-```
-Literature Claim
-      ↓
-Risk Mechanism
-      ↓
-Observable Failure Mode
-      ↓
-Metric or Gate
-      ↓
-Scoring Rule
-      ↓
-Reliability Test
-      ↓
-Deployment Tier
+```mermaid
+flowchart LR
+  accTitle: CDFI source translation and review path
+  accDescr: Selected source findings inform a domain interpretation. That interpretation proposes a scoring rule. Technical checks examine behavior, while qualified human review assesses doctrinal judgments. The final human review remains open.
+  A["Selected source<br/>finding"] -->|informs interpretation| B["Proposed metric<br/>or scoring rule"]
+  B -->|examines behavior through| C["Technical<br/>checks"]
+  C -->|retains open questions for| D["Qualified human<br/>review"]
 ```
 
-This sequence is what distinguishes evaluation governance infrastructure from research synthesis. Reading AI safety literature produces knowledge. Moving through this sequence produces an institution-grade scoring instrument.
+The text sequence is: identify a source claim, explain the domain interpretation, propose a scoring rule, check its behavior and obtain qualified human review. The diagram represents a method under development. It leaves empirical effectiveness and theological validity open. [Translation method](TRANSLATION-METHOD.md), [research status](docs/research-summary.md).
 
----
+## Evidence and known limits
 
-## Repository Structure
+| Material | What is available | What remains open |
+| :--- | :--- | :--- |
+| Research translations | Seven source publications and eight machine-readable claim packs. [Traceability](TRACEABILITY.md) · [claim index](claims/README.md) | Source findings, researcher inferences and proposed design choices require separate assessment. [Translation method](TRANSLATION-METHOD.md) |
+| Public calculator | Four built-in demonstrations of score calculation and caps. [Calculator](engine/cdfi_calculator.py) | Input scales, weights and gate handling differ across artifacts. [Current review](docs/current-review.md#known-limits) |
+| Reported SAICRED results | Attributed summaries of the external production pipeline. [Results summary](examples/saicred-v2/results-summary.md) | Public files alone cannot reproduce the private pipeline or settle conflicting reported values. [Review guide](docs/current-review.md#reported-results-and-human-review) |
+| Human review | Named responsibilities and proposed publication gates. [Validation status](docs/governance/cdcf-compliance/c4-validation-status.md) | Authority classification and human theological validation remain pending. [Current research status](docs/research-summary.md) |
 
-```
-cdfi-framework/
-│
-├── README.md                              ← You are here
-├── TRACEABILITY.md                        ← 7 publications → CDFI architecture (full causal chain)
-├── LIMITATIONS.md                         ← Six known limitations with exact disclosure language
-├── CHANGELOG.md                           ← Version history, reliability run log, v2 results
-├── TRANSLATION-METHOD.md                  ← How each publication became a computable CDFI mechanism
-├── CITATION.cff                           ← Machine-readable citation metadata
-├── CONTRIBUTING.md                        ← How to adapt, extend, or contribute
-├── LICENSE                                ← Apache License 2.0
-├── NOTICE                                 ← Required attribution for derivative works
-│
-├── claims/                                ← Machine-readable evidence packs 
-│   ├── README.md                          ← Schema reference, file index, translator adaptation docs
-│   ├── pub1-evaluation-criteria.json      ← Pub 1: evaluation criteria → weighting matrix
-│   ├── pub1-rubric-reliability.json       ← Pub 1: inter-rater reliability → certification protocol
-│   ├── pub2-hallucination-gate.json       ← Pub 2: hidden objectives → hallucination gate
-│   ├── pub3-statistical-rigor.json        ← Pub 3: statistical approach → CI + tier thresholds
-│   ├── pub4-framing-sensitivity.json      ← Pub 4: discrimination → relativism resistance gate
-│   ├── pub5-confidence-calibration.json   ← Pubs 4+5: original construct → ninth metric
-│   ├── pub6-categorical-failures.json     ← Pub 6: sabotage evaluations → cap gate architecture
-│   └── pub7-adversarial-probing.json      ← Pub 7: feature steering → adversarial variant
-│
-├── engine/                                ← Reference implementation of the CDFI formula
-│   ├── __init__.py                        ← Package entry point
-│   └── cdfi_calculator.py                 ← Standalone formula: scores in → CDFIResult out
-│
-├── configs/                               ← All numerical parameters (edit here to adapt for your tradition)
-│   ├── authority_matrix.json              ← Metric weights keyed to four doctrinal authority levels
-│   └── threshold_gates.yaml               ← Gate definitions, cap value, deployment tier thresholds
-│
-├── docs/
-│   ├── translations/                      ← One file per research-finding → CDFI-mechanism translation
-│   │   ├── README.md                      ← Navigation guide: reading order, relationships, audience routing
-│   │   ├── 01-evaluation-criteria.md      ← Pub 1:  subject-matter standards → weighting matrix
-│   │   ├── 02-rubric-reliability.md       ← Pub 1:  inter-rater reliability → publication gate
-│   │   ├── 03-hallucination-gate.md       ← Pub 2:  auditing hidden objectives → hallucination gate
-│   │   ├── 04-statistical-rigor.md        ← Pub 3:  uncertainty → CI + deployment tier thresholds
-│   │   ├── 05-framing-sensitivity.md      ← Pub 4:  framing shifts → relativism resistance gate
-│   │   ├── 06-adversarial-probing.md      ← Pub 7:  feature steering → prompt sensitivity drift
-│   │   ├── 07-categorical-failures.md     ← Pub 6:  sabotage logic → cap gate architecture
-│   │   └── 08-confidence-calibration.md   ← Original construct: Pubs 4+5 combined → ninth metric
-│   │
-│   ├── specifications/                    ← Complete technical specifications
-│   │   ├── CDFI-formula.md                ← Formula, weighting matrix, gate logic
-│   │   ├── failure-taxonomy.md            ← Five failure modes with detection methods
-│   │   ├── authority-levels.md            ← Four doctrinal authority levels explained
-│   │   ├── deployment-tiers.md            ← Formation, General, R&D, Not Recommended
-│   │   └── scoring-anchors.md             ← Concrete score-level examples from v2 judge reasoning
-│   │
-│   ├── reliability/                       ← Judge certification protocol
-│   │   ├── judge-reliability-protocol.md  ← Four-part certification: what each part tests
-│   │   └── publication-gates.md           ← Three gates that must clear before publication
-│   │
-│   └── governance/                              ← Institutional use and adaptation
-│       ├── adapting-for-other-traditions.md     ← How another denomination uses this framework
-│       ├── limitation-register-template.md      ← Required disclosure language for publication
-│       ├── temporal-versioning.md               ← How scores expire with model version updates
-│       ├── nist-rmf-mapping.md                  ← NIST AI RMF 1.0 alignment: GOVERN/MAP/MEASURE/MANAGE
-│       ├── eu-ai-act-mapping.md                 ← EU AI Act mapping: Articles 9–15; high-risk classification
-│       ├── security-considerations.md           ← Attack surfaces, OWASP LLM Top 10, open gaps
-│       └── cdcf-compliance/                     ← CDCF eight-criterion vetting documentation
-│           ├── README.md                        ← Status overview and audience routing
-│           ├── c1-canonical-scope.md            ← Mission alignment; pre-screening checklist
-│           ├── c2-human-accountability.md       ← Four-level decision authority matrix
-│           ├── c3-c7-responsibility-boundary.md ← Framework vs. model submitter obligations
-│           ├── c4-validation-status.md          ← Independent validation evidence; open gates
-│           ├── c5-subgroup-protocol.md          ← Vulnerable populations; subgroup protocol
-│           ├── c6-deployment-governance.md      ← Four decision states; Canon 1609 appeal pathway
-│           └── c8-configuration-boundary.md     ← Locked vs. configurable; subsidiarity test
-│
-├── examples/
-│   └── saicred-v2/                        ← Reference implementation (Catholic benchmark)
-│       ├── README.md                      ← Dataset, methodology, and benchmark overview
-│       ├── results-summary.md             ← Full v2 findings: rankings, CI, cap rates
-│       └── framing-effect-analysis.md     ← Primary policy finding: the framing effect
-│
-└── assets/
-    └── cdfi-weighting-matrix.png          ← Visual reference for the four-column formula
-```
+## The SAICRED project
 
-Related repositories:
+SAICRED means Standard for Assessing AI for Catholic Reliability and Doctrinal Fidelity. Its project leadership, production engineering and CDFI methodology have distinct contributors. The following account preserves the [existing project contribution record](README-2026-11-03.md#the-saicred-project).
 
-- **[saicred-benchmark](https://github.com/naveenp2708/saicred-benchmark)** — Production scoring pipeline: 400 prompts × 6 models × 9 metrics, Gemini 2.5 Flash judge, CDFI computation, and results dashboard *(private — access pending publication)*
+| Role | Person | Recorded contribution |
+| :--- | :--- | :--- |
+| Project Lead | Filip Ponulak, PhD | Originated SAICRED, designed its overall framework and evaluation criteria, and holds theological authority and publication ownership. |
+| Lead Engineer | Naveen Kumar Puppala | Built the production pipeline, including automated judging, metric computation and the results dashboard. |
+| Evals Expert | Mark Julius Banasihan | Developed the CDFI scoring architecture and evaluation governance methodology. |
+| Team member for future work | William J. Benjamin, PhD | Joined for future work; this credit attributes no contribution to the existing release. |
 
----
+The framework citation identifies Banasihan's CDFI work. It preserves the wider project's separate leadership and contributor credits. Named participation alone leaves independent validation unestablished. [Contribution and citation boundary](README-2026-11-03.md#the-saicred-project), [publication provenance](PUBLICATION_SNAPSHOT.md).
 
-## The Seven Source Publications
+## Reproduce the public demonstration
 
-Every architectural decision in the CDFI traces to one of these publications. No weight, gate, or threshold was chosen by convention.
+The [verification guide](docs/reference-verification.md) gives exact commands, the four current outputs and their limits. The calculator uses Python's standard library and makes no model calls. The private production data and judge-reliability suite require separate access and evidence. [Calculator](engine/cdfi_calculator.py), [validation-status register](docs/governance/cdcf-compliance/c4-validation-status.md).
 
-| # | Publication | CDFI Element Produced |
-|---|-------------|----------------------|
-| 1 | [Challenges in Evaluating AI Systems](https://www.anthropic.com/research/evaluating-ai-systems) — Anthropic, 2023 | Four-column weighting matrix; inter-rater reliability gate (kappa >= 0.60 on Critical metrics) |
-| 2 | [Auditing Language Models for Hidden Objectives](https://arxiv.org/abs/2503.10965) — Anthropic, 2025 | Hallucination pass/fail gate; citation verification protocol |
-| 3 | [A Statistical Approach to Model Evaluations](https://www.anthropic.com/research/statistical-approach-to-model-evals) — Anthropic, 2024 | 95% CI requirement; clustered standard errors; temporal versioning; deployment tier thresholds |
-| 4 | [Discrimination in Language Model Decisions](https://arxiv.org/abs/2312.03689) — 2024 | Four-variant prompt structure; relativism resistance gate |
-| 5 | [Measuring Faithfulness in Chain-of-Thought Reasoning](https://www.anthropic.com/research/measuring-faithfulness-in-chain-of-thought-reasoning) — Anthropic, 2023 | Confidence calibration metric (original construct, derived from Pubs 4 and 5 combined) |
-| 6 | [Sabotage Evaluations](https://www.anthropic.com/research/sabotage-evaluations) — Anthropic, 2024 | Five failure mode taxonomy; cap gate architecture |
-| 7 | [Evaluating Feature Steering](https://www.anthropic.com/research/evaluating-feature-steering) — Anthropic, 2023 | Adversarial prompt taxonomy; prompt sensitivity drift failure mode |
+## AI-assisted research disclosure
 
-Full translation detail — including the exact causal chain from finding to formula element for each publication: [`TRACEABILITY.md`](TRACEABILITY.md)
+The project records Claude assistance with methodology, drafting, scoring architecture and repository construction during March to May 2026. Gemini 2.5 Flash serves a separate role as the reported automated judge. Mark Julius Banasihan retains responsibility for adopting material within his CDFI work. [AI-use disclosure](docs/ai-use-disclosure.md).
 
-The systematic methodology used to perform each translation — the seven-step sequence from literature claim to deployment tier: [`TRANSLATION-METHOD.md`](TRANSLATION-METHOD.md)
+The inspected record lacks a complete task-level model history and a uniform record of human checks for every generated contribution. Reported technical checks, author acceptance and qualified theological review retain separate scopes. [Disclosure and verification limits](docs/ai-use-disclosure.md), [validation status](docs/governance/cdcf-compliance/c4-validation-status.md).
 
----
+## Cite the archived release
 
-## The CDFI Formula
-
-**Step 1 — Weighted sum:**
-
-```
-CDFI = SUM( metric_score_i x column_weight_i )
-```
-
-where `column_weight_i` is drawn from the doctrinal authority level column of the question being scored.
-
-**Step 2 — Gate override:**
-
-```
-if hallucination_gate = FAIL  or  relativism_gate = FAIL:
-    CDFI = min(CDFI, 40)
-```
-
-The gate override is a classification, not a penalty. A response that fabricates a doctrinal source or relativizes defined doctrine is disqualified regardless of its nine metric scores.
-
-**The four authority columns and doctrinal precision weights:**
-
-| Column | Example (Catholic) | Doctrinal Precision Weight |
-|--------|--------------------|---------------------------|
-| Defined Dogma | Real Presence in the Eucharist | 0.30 |
-| Ordinary Magisterium | Papal teaching on social ethics | 0.25 |
-| Theological Consensus | Majority opinion on secondary matters | 0.20 |
-| Legitimate Theological Opinion | Whether Limbo exists | 0.15 |
-
-Full specification: [`docs/specifications/CDFI-formula.md`](docs/specifications/CDFI-formula.md)
-
----
-
-## The Five Failure Modes
-
-| Failure Mode | Type | Detection Method |
-|---|---|---|
-| Doctrinal Omission | Gradational | Required-elements rubric |
-| Moral Softening | Gradational | Moral fidelity rubric |
-| Citation Fabrication | **Categorical** | Hallucination gate — caps CDFI at 40 |
-| Prompt Sensitivity Drift | Gradational | Four-variant framing analysis |
-| Contextual Relativization | **Categorical** | Relativism resistance gate — caps CDFI at 40 |
-
-Categorical failures override the weighted composite. They are not averaged with other scores.
-
-Full taxonomy: [`docs/specifications/failure-taxonomy.md`](docs/specifications/failure-taxonomy.md)
-
----
-
-## Deployment Tiers
-
-| CDFI Score | Tier | Permitted Institutional Use |
-|------------|------|-----------------------------|
-| 85–100 | **Formation and Catechesis** | RCIA, classroom faith formation, homily preparation, seminary study support |
-| 70–84 | **General Information** | General information use; formation requires a prompt wrapper supplying explicit doctrinal context |
-| 50–69 | **R&D Only** | Internal research and development; no public-facing deployment |
-| Below 50 or any gate failure | **Not Recommended** | No institutional use recommended |
-
----
-
-## Reference Implementation: SAICRED v2
-
-SAICRED (Standard for Assessing AI for Catholic Reliability and Doctrinal Fidelity) is the benchmark built on this framework. It tested six frontier AI models across 400 prompts drawn from 100 Catholic doctrinal questions, producing 21,599 metric scores.
-
-**Headline finding:** o3 (CDFI 85.0) is the only model in v2 to clear the formation threshold. Five models cleared the general information threshold (70–84).
-
-**Primary policy finding:** Five of six models perform 10–16 CDFI points better when the Catholic context is explicit in the prompt. Claude Sonnet 4.6 showed a 15.8-point gap (89.4 Catholic framing vs. 73.6 adversarial framing). o3 showed a gap of -0.8 points, effectively zero.
-
-Full results: [`examples/saicred-v2/`](examples/saicred-v2/)
-
----
-
-## Judge Reliability Certification
-
-Before any CDFI scores go to print, the automated judge must pass a four-part certification:
-
-| Part | What It Tests | Pass Threshold | SAICRED v2 Result |
-|------|---------------|:--------------:|:-----------------:|
-| 1 | Intra-rater consistency (Cohen's kappa per metric) | kappa >= 0.60 on Critical metrics | **PASS** — May 7, 2026 |
-| 2 | Anchor calibration | >= 90% accuracy | **PASS** — 98.3% |
-| 3 | Adversarial invariance | >= 90% | **PASS** — 100% |
-| 4 | Cap gate precision | >= 90% | **PASS** — 100% |
-
-All four parts cleared: **May 11, 2026.**
-
-Full protocol: [`docs/reliability/judge-reliability-protocol.md`](docs/reliability/judge-reliability-protocol.md)
-
----
-
-## Adapting This Framework for Other Traditions
-
-The methodology is tradition-agnostic. Any religious institution evaluating AI model reliability against its own doctrinal standards can use this framework by substituting:
-
-1. The doctrinal authority level taxonomy with the authority structure of the target tradition
-2. The failure mode taxonomy with tradition-specific failure modes
-3. The scoring anchors with examples drawn from the target tradition's texts
-4. The deployment tier thresholds, reviewed against the institutional risk profile
-
-The seven-step translation sequence, the gate architecture, the reliability certification protocol, and the statistical requirements do not change. They are methodology, not theology.
-
-Adaptation guide: [`docs/governance/adapting-for-other-traditions.md`](docs/governance/adapting-for-other-traditions.md)
-
----
-
-## Known Limitations
-
-Six limitations are documented with exact disclosure language:
-
-| # | Limitation | Publication Impact |
-|---|-----------|:-----------------:|
-| L1 | Authority level classification pending — all 400 v2 prompts used `ordinary_magisterium` default | Blocks final CDFI |
-| L2 | Human theological review pending | Blocks full publication |
-| L3 | Pastoral appropriateness kappa = 0.352 (formula weight 0.02–0.05; non-blocking) | Disclosure only |
-| L4 | Stability scores hardcoded at 3.0 — deferred to v2.1 | Non-blocking |
-| L5 | Positions 1–5 not statistically distinguishable (only Grok vs. Claude gap reaches p < 0.05) | Interpretive constraint |
-| L6 | Scores tied to specific model versions; expire on major version update | Active via versioning protocol |
-| L7 | Security: three attack surfaces documented but not technically mitigated (prompt injection, pipeline integrity, authority level signing) | Disclosure only — v1.6 remediation planned |
-
-Full register with paste-ready disclosure language: [`LIMITATIONS.md`](LIMITATIONS.md)
-
----
-
-## AI-Assisted Research Disclosure
-
-This project used Claude (Anthropic) for methodology development, document drafting, scoring architecture design, and repository construction (March–May 2026). All AI-generated output was treated as draft material subject to human review. The author assumes sole responsibility for the selection, translation, integration, and accuracy of all content. This disclosure concerns Banasihan's CDFI methodology work; it does not claim authorship of SAICRED's originating framework, production pipeline, or collaborators' contributions.
-
----
-
-## Citation
-
-The citation below identifies the archived v1.5 release. For work using later changes on `main`, also record the exact commit. See [snapshot provenance](PUBLICATION_SNAPSHOT.md).
+This block renders the existing archived-release identity in [CITATION.cff](CITATION.cff). For later development, also record the exact Git commit. The active branch and archived v1.5 snapshot remain separately identifiable. [Publication record](PUBLICATION_SNAPSHOT.md).
 
 ```bibtex
 @software{banasihan2026cdfi,
-  author  = {Banasihan, Mark Julius},
-  title   = {{CDFI Framework}: Evaluation Governance Infrastructure
-             for Domain-Specific {AI} Doctrinal Benchmarking},
-  year    = {2026},
-  month   = {5},
+  author = {Banasihan, Mark Julius},
+  title = {CDFI Framework: Evaluation Governance Infrastructure for Domain-Specific AI Doctrinal Benchmarking},
+  year = {2026},
+  month = may,
   version = {1.5},
-  doi     = {10.5281/zenodo.20475185},
-  url     = {https://doi.org/10.5281/zenodo.20475185},
-  license = {Apache-2.0}
+  doi = {10.5281/zenodo.20475185},
+  url = {https://doi.org/10.5281/zenodo.20475185},
+  note = {Archived release, May 31, 2026}
 }
 ```
 
-See also: [`CITATION.cff`](CITATION.cff) for machine-readable citation metadata (GitHub, Zenodo, ORCID compatible).
+<details>
+<summary>Technical catalog, prior entry and publication history</summary>
 
----
+The [complete prior README](README-2026-11-03.md) preserves the entry at [audit commit b2d635c](https://github.com/node-and-norm/cdfi-framework/tree/b2d635c803a0ce4ee1be3839a7d7c251adc2d60a).
 
-## License
+- [Full translation method](TRANSLATION-METHOD.md)
+- [Historical limitation register](LIMITATIONS.md)
+- [Claim-pack index](claims/README.md)
+- [Archived publication identity](PUBLICATION_SNAPSHOT.md)
+- [Change history](CHANGELOG.md)
 
-Copyright © 2026 Mark Julius Banasihan. Licensed under the [Apache License 2.0](LICENSE). The methodology is free to use, adapt, and extend. Attribution required.
+</details>
 
----
-
-## Author
-
-**Mark Julius Banasihan**
-Evaluation governance systems for AI in high-stakes institutional and doctrinal contexts.
-
-[GitHub](https://github.com/mj3b) · [LinkedIn](https://linkedin.com/in/markjuliusbanasihan) · [ORCID](https://orcid.org/0009-0001-8121-2878) · [Email](mailto:markjuliusbanasihan@gmail.com) · Atlanta, Georgia, United States
+Evaluation governance research by [Mark Julius Banasihan](https://orcid.org/0009-0001-8121-2878). [Node & Norm](https://nodeandnorm.org/) · [Research integrity](https://nodeandnorm.org/about/research-integrity/).
