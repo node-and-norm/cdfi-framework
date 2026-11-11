@@ -1,3 +1,9 @@
+> **Research status, as of November 11, 2026: Provisional method under development.**
+>
+> **What this repository holds.** Scoring rules, source-to-method records and a public calculator developed for SAICRED.
+>
+> **What remains open.** Scoring-contract reconciliation, qualified theological validation and independent assessment remain open. Archived v1.5 is distinct from later active-branch changes.
+
 <h1>
 <picture>
   <source media="(max-width: 600px)" srcset="assets/research/v1/banner-mobile-dark.svg">
