@@ -40,14 +40,7 @@ The current evidence leaves the validity of particular weights, thresholds and i
 
 ## Method in brief
 
-```mermaid
-flowchart LR
-  accTitle: CDFI source translation and review path
-  accDescr: Selected source findings inform a domain interpretation. That interpretation proposes a scoring rule. Technical checks examine behavior, while qualified human review assesses doctrinal judgments. The final human review remains open.
-  A["Selected source<br/>finding"] -->|informs interpretation| B["Proposed metric<br/>or scoring rule"]
-  B -->|examines behavior through| C["Technical<br/>checks"]
-  C -->|retains open questions for| D["Qualified human<br/>review"]
-```
+![Selected source findings inform a domain interpretation. That interpretation proposes a scoring rule. Technical checks examine behavior, while qualified human review assesses doctrinal judgments. The final human review remains open.](assets/research/source-translation-method.svg)
 
 The text sequence is: identify a source claim, explain the domain interpretation, propose a scoring rule, check its behavior and obtain qualified human review. The diagram represents a method under development. It leaves empirical effectiveness and theological validity open. [Translation method](TRANSLATION-METHOD.md), [research status](docs/research-summary.md).
 

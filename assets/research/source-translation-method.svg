@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="352" viewBox="0 0 320 352"
+     role="img" aria-labelledby="title description" font-family="Arial, Helvetica, sans-serif">
+  <title id="title">CDFI source translation and review path</title>
+  <desc id="description">Selected source findings inform a domain interpretation. That interpretation proposes a scoring rule. Technical checks examine behavior, while qualified human review assesses doctrinal judgments. The final human review remains open.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8"
+            markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0 8 4 0 8Z" fill="#514788"/>
+    </marker>
+  </defs>
+  <rect width="320" height="352" rx="8" fill="#faf9fc"/>
+  <g>
+    <rect x="14" y="14" width="292" height="46" rx="6" fill="#eeebff" stroke="#887aca"/>
+    <text x="160" y="44" text-anchor="middle" font-size="19" font-weight="600" fill="#211e31">Selected source finding</text>
+  </g>
+  <g>
+    <path d="M38 60v38" fill="none" stroke="#514788" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="52" y="86" font-size="17" fill="#514788">informs interpretation</text>
+  </g>
+  <g>
+    <rect x="14" y="100" width="292" height="66" rx="6" fill="#eeebff" stroke="#887aca"/>
+    <text x="160" y="129" text-anchor="middle" font-size="19" font-weight="600" fill="#211e31">Proposed metric or</text>
+    <text x="160" y="151" text-anchor="middle" font-size="19" font-weight="600" fill="#211e31">scoring rule</text>
+  </g>
+  <g>
+    <path d="M38 166v38" fill="none" stroke="#514788" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="52" y="192" font-size="17" fill="#514788">examines behavior through</text>
+  </g>
+  <g>
+    <rect x="14" y="206" width="292" height="46" rx="6" fill="#eeebff" stroke="#887aca"/>
+    <text x="160" y="236" text-anchor="middle" font-size="19" font-weight="600" fill="#211e31">Technical checks</text>
+  </g>
+  <g>
+    <path d="M38 252v38" fill="none" stroke="#514788" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="52" y="278" font-size="17" fill="#514788">retains open questions for</text>
+  </g>
+  <g>
+    <rect x="14" y="292" width="292" height="46" rx="6" fill="#e4dfff" stroke="#887aca"/>
+    <text x="160" y="322" text-anchor="middle" font-size="19" font-weight="600" fill="#211e31">Qualified human review</text>
+  </g>
+</svg>
